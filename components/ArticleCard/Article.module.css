@@ -1,0 +1,9 @@
+.article{
+    border-radius: .3em;
+    overflow: hidden;
+}
+.image{
+    max-width: 300px;
+    width: 100%;
+    height: 200px;
+}

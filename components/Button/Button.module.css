@@ -1,0 +1,13 @@
+.button {
+    padding:1em;
+    width: 150px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+    border: none;
+    border-radius: 40px;
+    height: 40px;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
