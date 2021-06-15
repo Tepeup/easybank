@@ -3,6 +3,8 @@
     padding: 1em;
     justify-content: center;
     width: 100%;
+    z-index: 999;
+    background-color: white;
 }
 .section{
     display: flex;
@@ -14,7 +16,7 @@
 .list{
     display: flex;
     list-style: none;
-    color: rgba(0,0,0,0.5)
+    color: rgba(0,0,0,0.4)
 }
 .list > *{
     margin: 0 1em

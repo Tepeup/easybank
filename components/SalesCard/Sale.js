@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./Sale.module.css";
-export default function Sale() {
+export default function Sale(props) {
   return (
-    <div>
-      <img src="" alt="" />
+    <div className={styles.sale}>
+      <img src={props.image} alt="Icon" />
       <div className={styles.body}>
-        <div className={styles.author}></div>
-        <div className={styles.title}></div>
-        <div className={styles.content}></div>
+        <div className={styles.title}>{props.title}</div>
+        <div className={styles.content}>{props.content}</div>
       </div>
     </div>
   );
