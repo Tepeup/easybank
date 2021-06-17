@@ -1,0 +1,60 @@
+.container{
+   width: 1000px;
+   display: flex;
+   justify-content: left;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: left; 
+    max-width: 400px;
+}
+
+.content{
+    padding:1.5em 0;
+    color:rgba(0,0,0,0.4);
+    max-width: 375px;
+  
+}
+
+.title{
+    font-size: 2.5em;
+    color:#2e324e;
+    
+    
+}
+.images{
+    position: absolute;
+    top:-20%;
+    left:56%;
+    height: 700px;
+    z-index: 999;
+}
+
+@media (max-width:425px) {
+    .container{
+        margin-bottom: 5em;
+    }
+
+    .body{
+        display: grid;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+     }
+    
+    .images{
+        top: -22%;
+        left: 1%;
+        height: 450px;
+    }
+    .content{
+
+        max-width: 300px;
+      
+    }
+    
+
+    
+}

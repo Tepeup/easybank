@@ -1,10 +1,11 @@
 .navbar {
     display: flex;
-    padding: 1em;
+    padding: 0 2em;
     justify-content: center;
     width: 100%;
     z-index: 999;
     background-color: white;
+    position: relative;
 }
 .section{
     display: flex;
@@ -12,12 +13,139 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1000px;
+   
+}
+.logo{
+    cursor: pointer;
+}
+
+.compress{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 .list{
     display: flex;
     list-style: none;
-    color: rgba(0,0,0,0.4)
+    color: rgba(0,0,0,0.4);
+    margin:0;
+    width: 100%;
+    justify-content: center;
+   
 }
+
 .list > *{
-    margin: 0 1em
+    margin: 0 1em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.list >*:hover{
+    border-bottom: solid hsl(136, 65%, 51%) 3px;
+    color:black
+}
+.compress{
+    display: flex;
+    align-items: center;
+}
+
+.burger{
+    display:none;
+    width: 0;
+}
+
+
+
+.show{
+    display: flex;
+    position: absolute;
+    top:60px;
+    height: 100vh;
+    background: rgb(62,67,106);
+    background: linear-gradient(180deg, rgba(62,67,106,1) 0%, rgba(255,255,255,0) 90%);
+    width: 100%;
+    justify-content: center;
+
+   
+}
+.show .list{
+    background-color: white;
+    height: fit-content;
+    width: 90%;
+    max-width: 350px;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+   justify-content: center;
+   align-items: center;
+   padding: 1em;
+
+}
+.show .list li{
+    color:rgba(62,67,106,1);
+    height: auto;
+    margin:1em;
+    font-weight: bold;
+    cursor: pointer;
+
+
+}
+
+.hide{display: none}
+
+@media (max-width: 812px) { 
+
+    .compress{
+        display: none;
+    }
+    .burger{
+
+        width: 30px;
+        height: 60px;
+        padding: 1em 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column nowrap;
+        cursor: pointer;
+       
+        
+    }
+    .burger > *{
+        height: 2px;
+        background-color: black;
+    }
+    .cross{
+        height: 60px;
+        width: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column nowrap;
+        transform: translateX(-7px) translateY(1px);
+
+    }
+    .cross > *{
+        height: 2px;
+        background-color: black;
+        transform-origin: 0;
+        
+    }
+
+    
+    .cross .line:nth-child(1) {
+            transform:  rotate(45deg) translateX(14px) translateY(-1px);
+    ;
+     }
+    .cross .line:nth-child(2) {
+          
+            opacity: 0;
+    }
+    .cross .line:nth-child(3) {
+            transform: rotate(-45deg) translateX(15px);
+     }
+    
+
 }
